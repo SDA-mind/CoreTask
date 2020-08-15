@@ -77,7 +77,7 @@ public class UserDaoJDBCImpl implements UserDao {
             conn = Util.getMyConnection();
             statement = conn.createStatement();
 
-            int resultRows = statement.executeUpdate("DELETE FROM Users WHERE USER ID = " + id + ";");
+            int resultRows = statement.executeUpdate("DELETE FROM Users WHERE ID = " + id + ";");
 
             System.out.println("Удалено строк: " + resultRows);
 
