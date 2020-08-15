@@ -15,17 +15,5 @@ public class Main {
         userService.removeUserById(2);
         userService.cleanUsersTable();
         userService.dropUsersTable();
-
-//        UserDaoJDBCImpl daoJDBC = new UserDaoJDBCImpl();
-//        daoJDBC.createUsersTable();
-//        daoJDBC.saveUser("Tom", "Brook", (byte)25);
-//        daoJDBC.saveUser("Bob", "Green", (byte)30);
-//        daoJDBC.saveUser("Clara", "Banks", (byte)20);
-//        daoJDBC.saveUser("Timmy", "White", (byte)15);
-//        daoJDBC.getAllUsers();
-//        daoJDBC.removeUserById(2);
-//        daoJDBC.cleanUsersTable();
-//        daoJDBC.dropUsersTable();
-
     }
 }
