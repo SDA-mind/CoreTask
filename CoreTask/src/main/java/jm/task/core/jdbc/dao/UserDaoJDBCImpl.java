@@ -31,10 +31,13 @@ public class UserDaoJDBCImpl implements UserDao {
 
             System.out.println("Создана таблица, количество строк: " + resultRows);
 
-            conn.close();
-
         } catch (SQLException e) {
             System.out.println("Таблица уже существует.");
+        } finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+            }
         }
     }
 
@@ -47,10 +50,13 @@ public class UserDaoJDBCImpl implements UserDao {
 
             System.out.println("Таблица удалена, количество строк: " + resultRows);
 
-            conn.close();
-
         } catch (SQLException e) {
             System.out.println("Таблицы не существует.");
+        } finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+            }
         }
     }
 
@@ -65,10 +71,13 @@ public class UserDaoJDBCImpl implements UserDao {
 
             System.out.println("Добавлен User, количество: " + resultRows);
 
-            conn.close();
-
         } catch (SQLException e) {
             System.out.println("User уже существует.");
+        } finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+            }
         }
     }
 
@@ -81,10 +90,14 @@ public class UserDaoJDBCImpl implements UserDao {
 
             System.out.println("Удалено строк: " + resultRows);
 
-            conn.close();
 
         } catch (SQLException e) {
             System.out.println("Строка отсутствует.");
+        } finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+            }
         }
     }
 
@@ -117,10 +130,16 @@ public class UserDaoJDBCImpl implements UserDao {
                 System.out.println("User lastName: " + lastName);
                 System.out.println("User age: " + age);
 
-                conn.close();
+
             }
         } catch (SQLException e) {
             System.out.println("!");
+        } finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+
+            }
         }
         System.out.println("----------------------");
         return list;
@@ -135,10 +154,13 @@ public class UserDaoJDBCImpl implements UserDao {
 
             System.out.println("Удалено строк: " + resultRows);
 
-            conn.close();
-
         } catch (SQLException e) {
             System.out.println("Строки отсутствуют");
+        } finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+            }
         }
     }
 }
