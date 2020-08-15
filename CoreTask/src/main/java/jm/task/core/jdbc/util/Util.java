@@ -10,7 +10,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Util {
-    private static SessionFactory sessionFactory;
 
     public static Connection getMyConnection() throws SQLException {
         String hostName = "localhost";
@@ -21,19 +20,5 @@ public class Util {
         String connectionURL = "jdbc:mysql://" + hostName + ":3306/" + dbName + "?useSSL=false";
 
         return DriverManager.getConnection(connectionURL, userName, password);
-    }
-    public static SessionFactory getSessionFactory() {
-        if (sessionFactory == null) {
-            try {
-                Configuration configuration = new Configuration().configure();
-                configuration.addAnnotatedClass(User.class);
-                StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
-                sessionFactory = configuration.buildSessionFactory(builder.build());
-
-            } catch (Exception e) {
-                System.out.println("Исключение!" + e);
-            }
-        }
-        return sessionFactory;
     }
 }
