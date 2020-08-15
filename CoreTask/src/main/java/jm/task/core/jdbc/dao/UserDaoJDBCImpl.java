@@ -11,8 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoJDBCImpl implements UserDao {
-//    private Connection conn;
-//    private Statement statement;
+    private Connection conn;
+    private Statement statement;
 
     public UserDaoJDBCImpl() {
 
