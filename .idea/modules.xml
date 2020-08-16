@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/CoreTask.iml" filepath="$PROJECT_DIR$/.idea/CoreTask.iml" />
-      <module fileurl="file://$PROJECT_DIR$/CoreTask/TaskJDBC.iml" filepath="$PROJECT_DIR$/CoreTask/TaskJDBC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TaskJDBC.iml" filepath="$PROJECT_DIR$/TaskJDBC.iml" />
     </modules>
   </component>
 </project>
