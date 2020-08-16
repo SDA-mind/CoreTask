@@ -20,6 +20,7 @@ public class UserDaoJDBCImpl implements UserDao {
 
     public void createUsersTable() {
         try {
+
             conn = Util.getMyConnection();
             statement = conn.createStatement();
 
